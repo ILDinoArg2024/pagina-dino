@@ -1,0 +1,83 @@
+body {
+    background-color: #eef2f6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-image: url("../img/bandera.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    color: #0b2240;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: rgba(30, 30, 30, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+img {
+    display: block;
+    margin: 0 auto 16px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
